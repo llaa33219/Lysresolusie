@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리-리스트 항목 제한 해결",
+  "version": "1.0",
+  "description": "작품 만들기 리스트 항목이 20개로 제한되는 문제를 해결해줍니다.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://playentry.org/ws/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected.js"
+      ],
+      "matches": [
+        "https://playentry.org/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
